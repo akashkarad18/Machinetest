@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form to PDF</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <form id="dataForm">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="photo">Photo:</label>
+                <input type="file" id="photo" name="photo" accept="image/*" required>
+            </div>
+            <div>
+                <label for="rank">Rank:</label>
+                <select id="rank" name="rank" required>
+                    <option value="First Rank">First Rank</option>
+                    <option value="Second Rank">Second Rank</option>
+                    <option value="Third Rank">Third Rank</option>
+                </select>
+            </div>
+            <div>
+                <label for="idNumber">ID Number:</label>
+                <input type="text" id="idNumber" name="idNumber" readonly>
+            </div>
+            <button type="submit">Generate PDF</button>
+        </form>
+
+        <div id="result" class="output">
+            <canvas id="canvas" class="output-canvas" width="500" height="300"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
